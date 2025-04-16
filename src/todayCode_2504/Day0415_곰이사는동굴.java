@@ -7,7 +7,6 @@ public class Day0415_곰이사는동굴 {
     public static long maxBearsInCave(int n, long[] caves) {
         long totalBears = 0;
         boolean[] occupied = new boolean[n];  // 각 주요 방에 곰이 있는지 여부
-
         for (int i = 0; i < n; i++) {
             int prev = (i - 1 + n) % n;
 
