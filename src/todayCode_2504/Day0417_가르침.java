@@ -10,12 +10,12 @@ public class Day0417_가르침 {
 
     static int solution(int N, int K, List<String> words) {
         // K가 5보다 작으면 'antic'도 못 배우므로 0 반환
-        if (K < 5) return 0;
+        if (K < 5) return 0;    // antic도 못 배우면 읽을 수 있는 단어 없음
 
         // 반드시 배워야 하는 기본 글자들('antic') 집합
         Set<Character> basic = new HashSet<>(Arrays.asList('a', 'n', 't', 'i', 'c'));
 
-        // 입력된 모든 단어에서 사용된 알파벳들의 집합 생성
+        // 입력된 모든 단어에서 사용된 알파벳들의 집합 생성 (antic 제외)
         Set<Character> alpha = new HashSet<>();
         for (String word : words) {
             for (char c : word.toCharArray()) {
