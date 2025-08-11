@@ -1,4 +1,4 @@
-package todayCode_2504;
+package Code_2504;
 
 import java.util.Scanner;
 
